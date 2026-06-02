@@ -335,6 +335,8 @@ section h2{
     animation-delay: 8s; /* Se mantiene en 8s porque es la mitad de 16s */
 }
 
+
+
 /* TRANSICIÓN FLUIDA CORREGIDA */
 @keyframes fadeSlider{
     0% {
@@ -558,16 +560,38 @@ section h2{
 
 }  
 
+
 /* ===================================
-   16. SERVIÇOS
+   SERVIÇOS
 =================================== */
 
 .servicos{
 
-    background:var(--white);
+    background:#f4b183; /* naranja suave */
+
+    padding:100px 5%;
 
 }
 
+/* ===================================
+   GRID
+=================================== */
+
+.cards{
+
+    max-width:1200px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    justify-content:center;
+
+}
 /* ===================================
    GRID
 =================================== */
@@ -580,6 +604,26 @@ section h2{
     repeat(auto-fit,minmax(300px,1fr));
 
     gap:30px;
+
+}
+
+@media(max-width:992px){
+
+    .cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
 
 }
 
