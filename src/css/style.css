@@ -559,19 +559,74 @@ section h2{
 }
 
 /* ===================================
-   21. FOOTER
+   21. FOOTER (Efecto Cristal Futurista)
 =================================== */
-footer{
-    background: #2e2a2a !important;
-    color: #fbf9f6 !important;
-    text-align:center;
-    padding:40px 5%;
+footer {
+    background: rgba(46, 42, 42, 0.4) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px 5%;
+    position: relative;
+    z-index: 10;
 }
 
-footer p{
-    font-size:.9rem;
-    opacity:.8;
-} 
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+footer p.copyright {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    opacity: 0.85;
+    margin: 0;
+    font-weight: 400;
+}
+
+.developer-credit {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.dev-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.dev-link:hover {
+    color: white;
+    background: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(217, 154, 172, 0.3);
+}
+
+/* Adaptación del footer en celulares */
+@media(max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+}
 
 /* ===================================
    DETALLES DE SERVICIOS
