@@ -1,33 +1,23 @@
 /* ===================================
    1. VARIABLES
 =================================== */
-
 :root{
-
     --primary-color:#d99aac;
     --primary-hover:#c48295;
-
     --secondary-color:#f2b6c6;
     --accent-color:#f5d6df;
-
-    --text-dark:#333333;
+    --text-dark:#3a3535;
     --text-light:#666666;
-
-    --bg-light:#f8f5f5;
-    --bg-cream:#fff7f2;
-
+    --bg-light:#fbf9f6;
+    --bg-cream:#efe7e5;
     --white:#ffffff;
-
-    --shadow:0 10px 30px rgba(0,0,0,.1);
-
-    --transition:all .3s ease;
-
+    --shadow:0 10px 30px rgba(180, 160, 150, 0.08);
+    --transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ===================================
    2. RESET
 =================================== */
-
 *{
     margin:0;
     padding:0;
@@ -37,7 +27,6 @@
 /* ===================================
    3. HTML
 =================================== */
-
 html{
     scroll-behavior:smooth;
 }
@@ -45,19 +34,12 @@ html{
 /* ===================================
    4. BODY
 =================================== */
-
 body{
-
-    font-family:'Poppins',sans-serif;
-
-    color:var(--text-dark);
-
-    background:var(--white);
-
-    line-height:1.6;
-
-    overflow-x:hidden;
-
+    background-color: var(--bg-light); 
+    color: var(--text-dark); 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 img{
@@ -76,230 +58,147 @@ ul{
 /* ===================================
    5. SEÇÕES
 =================================== */
-
 section{
     padding:100px 5%;
 }
 
-section h2{
+section:nth-child(even) {
+    background: linear-gradient(135deg, #fbf9f6 0%, #f5ece9 50%, #eeeaf3 100%);
+}
 
+section h2{
     font-family:'Playfair Display',serif;
     text-align:center;
-
     font-size:2.5rem;
-
     color:var(--primary-color);
-
     margin-bottom:50px;
-
 }
 
 /* ===================================
    6. HEADER
 =================================== */
-
-.transparent-header{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-
-    z-index:1000;
-
-    background:rgba(255,255,255,.15);
-
-    backdrop-filter:blur(10px);
-
-    -webkit-backdrop-filter:blur(10px);
-
-    transition:var(--transition);
-
+.transparent-header {
+    background: rgba(251, 249, 246, 0.75) !important; 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition);
 }
 
 .transparent-header.scrolled{
-
-    background:rgba(255,255,255,.95);
-
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
-
+    background: rgba(251, 249, 246, 0.9) !important;
+    box-shadow: 0 4px 20px rgba(180, 160, 150, 0.1);
 }
 
 /* ===================================
    7. NAVBAR
 =================================== */
-
 .navbar{
-
     max-width:1400px;
-
     margin:auto;
-
     padding:12px 5%;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
 }
 
 /* ===================================
    8. LOGO
 =================================== */
-
 .logo{
-
     display:flex;
-
     align-items:center;
-
     gap:15px;
-
 }
 
 .logo img{
-
     width:60px;
-
     height:60px;
-
     object-fit:cover;
-
     border-radius:50%;
-
     border:2px solid var(--secondary-color);
-
 }
 
 .logo-text h3{
-
     font-family:'Playfair Display',serif;
-
     color:var(--primary-color);
-
     font-size:1.4rem;
-
     margin:0;
-
 }
 
 .logo-text p{
-
     color:var(--text-light);
-
     font-size:.85rem;
-
     margin:0;
-
 }
 
 /* ===================================
    9. MENU
 =================================== */
-
 .navbar ul{
-
     display:flex;
-
     align-items:center;
-
     gap:30px;
-
 }
 
 .navbar ul li a{
-
     color:var(--text-dark);
-
     font-weight:500;
-
     position:relative;
-
     transition:var(--transition);
-
 }
 
 .navbar ul li a:hover{
-
     color:var(--primary-color);
-
 }
 
-/* LINHA ANIMADA */
-
 .navbar ul li a::after{
-
     content:"";
-
     position:absolute;
-
     left:0;
-
     bottom:-5px;
-
     width:0;
-
     height:2px;
-
     background:var(--primary-color);
-
     transition:var(--transition);
-
 }
 
 .navbar ul li a:hover::after{
-
     width:100%;
-
 }
 
 /* ===================================
    10. MENU MOBILE
 =================================== */
-
 .menu-toggle{
-
     display:none;
-
     font-size:2rem;
-
     cursor:pointer;
-
     color:var(--primary-color);
-
 }
 
 /* ===================================
    11. HERO
 =================================== */
-
 .hero{
-
     height:100vh;
-
     position:relative;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     text-align:center;
-
     overflow:hidden;
-
 }
 
 .hero-slider{
     position: absolute;
     inset: 0;
     z-index: -1;
-    background-color: #1a1a1a; /* 1. RESPALDO: Si hay una milésima de segundo vacía, se verá oscuro y elegante, no blanco */
+    background-color: #1a1a1a; 
     overflow: hidden;
 }
 
@@ -312,871 +211,457 @@ section h2{
     animation: fadeSlider 16s infinite;
 }
 
-/* FOTO 1 */
 .slide1{
-    background-image:
-    linear-gradient(
-        rgba(0,0,0,.35),
-        rgba(0,0,0,.35)
-    ),
-    url("../../imagens/fotoinicio.jpg");
+    background-image: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url("../../imagens/fotoinicio.jpg");
     animation-delay: 0s;
 }
 
-/* FOTO 2 */
 .slide2{
-    background-image:
-    linear-gradient(
-        rgba(0,0,0,.35),
-        rgba(0,0,0,.35)
-    ),
-    url("../../imagens/fototipo1.jpg");
-    animation-delay: 8s; /* Se mantiene en 8s porque es la mitad de 16s */
+    background-image: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url("../../imagens/fototipo1.jpg");
+    animation-delay: 8s; 
 }
 
-
-
-/* TRANSICIÓN FLUIDA CORREGIDA */
 @keyframes fadeSlider{
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    45% {
-        opacity: 1;
-        transform: scale(1.04); /* El zoom se mantiene suave mientras es totalmente visible */
-    }
-
-    50% {
-        opacity: 0;
-        transform: scale(1.05); /* Aquí ya se desvaneció por completo */
-    }
-
-    55% {
-        opacity: 0;
-        transform: scale(1); /* Resetea el tamaño en secreto mientras está invisible */
-    }
-
-    95% {
-        opacity: 0;
-        transform: scale(1);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+    0% { opacity: 1; transform: scale(1); }
+    45% { opacity: 1; transform: scale(1.04); }
+    50% { opacity: 0; transform: scale(1.05); }
+    55% { opacity: 0; transform: scale(1); }
+    95% { opacity: 0; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1); }
 }
 
 /* ===================================
    13. HERO CONTENT
 =================================== */
-
 .hero-content{
-
     max-width:850px;
-
     padding:20px;
-
     color:white;
-
     z-index:2;
-
 }
 
 .hero-content h2{
-
     font-family:'Playfair Display',serif;
-
     font-size:clamp(2.5rem,8vw,5rem);
-
     line-height:1.1;
-
     margin-bottom:25px;
-
     text-shadow:0 4px 15px rgba(0,0,0,.3);
-
 }
 
 .subtitulo{
-
     font-size:1.2rem;
-
     margin-bottom:30px;
-
 }
 
 /* ===================================
    14. BOTÃO
 =================================== */
-
 .btn-whatsapp{
-
     display:inline-block;
-
     padding:16px 40px;
-
     background:var(--primary-color);
-
     color:white;
-
     border-radius:50px;
-
     font-weight:600;
-
     letter-spacing:1px;
-
     transition:var(--transition);
-
     box-shadow:0 8px 20px rgba(217,154,172,.4);
-
 }
 
 .btn-whatsapp:hover{
-
     background:var(--primary-hover);
-
-    transform:translateY(-4px);
-
+    transform:translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(217, 154, 172, 0.5);
 }
 
-/* ===================================
-   TEXTO INFERIOR
-=================================== */
-
 .texto-inferior{
-
     margin-top:30px;
-
     font-size:1rem;
-
     opacity:.95;
-
 }
 
 /* ===================================
    15. SOBRE
 =================================== */
-
 .sobre{
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:60px;
-
     background:var(--bg-light);
-
 }
 
-/* ===================================
-   IMAGENS
-=================================== */
-
 .sobre-imagens{
-
     flex:1;
-
     position:relative;
-
     min-height:500px;
-
 }
 
 .foto1{
-
     width:75%;
-
     height:450px;
-
     object-fit:cover;
-
     border-radius:20px;
-
     box-shadow:var(--shadow);
-
 }
 
 .foto2{
-
     width:50%;
-
     height:280px;
-
     object-fit:cover;
-
     position:absolute;
-
     bottom:0;
-
     right:0;
-
     border-radius:20px;
-
-    border:8px solid white;
-
+    border:8px solid var(--white);
     box-shadow:var(--shadow);
-
 }
 
-/* ===================================
-   TEXTO
-=================================== */
-
 .sobre-texto{
-
     flex:1;
-
 }
 
 .sobre-texto h2{
-
     text-align:left;
-
 }
 
 .sobre-texto p{
-
     color:var(--text-light);
-
     margin-bottom:20px;
-
     font-size:1.05rem;
-
 }
 
-/* ===================================
-   BOTÃO SOBRE
-=================================== */
-
 .sobre .btn-whatsapp{
-
     margin-top:10px;
-
 }  
-
 
 /* ===================================
    SERVIÇOS
 =================================== */
-
 .servicos{
-
-    background:#f4b183; /* naranja suave */
-
+    background: var(--bg-cream); 
     padding:100px 5%;
-
 }
 
-/* ===================================
-   GRID
-=================================== */
-
 .cards{
-
     max-width:1200px;
-
     margin:0 auto;
-
     display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
     gap:30px;
-
-    justify-content:center;
-
-}
-/* ===================================
-   GRID
-=================================== */
-
-.cards{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(300px,1fr));
-
-    gap:30px;
-
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 @media(max-width:992px){
-
-    .cards{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
+    .cards{ grid-template-columns:repeat(2,1fr); }
 }
 
 @media(max-width:768px){
-
-    .cards{
-
-        grid-template-columns:1fr;
-
-    }
-
+    .cards{ grid-template-columns:1fr; }
 }
 
-/* ===================================
-   CARD
-=================================== */
-
 .card{
-
     position:relative;
-
     overflow:hidden;
-
     border-radius:20px;
-
-    box-shadow:var(--shadow);
-
-    transition:var(--transition);
-
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
 }
 
 .card:hover{
-
-    transform:translateY(-10px);
-
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(217, 154, 172, 0.15);
 }
 
-/* ===================================
-   IMAGEM
-=================================== */
-
 .card img{
-
     width:100%;
-
     height:350px;
-
     object-fit:cover;
-
-    transition:.5s ease;
-
+    transition: transform .5s ease;
 }
 
 .card:hover img{
-
-    transform:scale(1.08);
-
+    transform:scale(1.05);
 }
 
-/* ===================================
-   OVERLAY
-=================================== */
-
 .overlay{
-
     position:absolute;
-
     bottom:0;
-
     left:0;
-
     width:100%;
-
     padding:25px;
-
-    background:
-    linear-gradient(
-        transparent,
-        rgba(0,0,0,.8)
-    );
-
+    background: linear-gradient(transparent, rgba(46, 42, 42, 0.85));
     color:white;
-
     font-size:1.2rem;
-
     font-weight:600;
-
 }  
 
 /* ===================================
    17. DOULA
 =================================== */
-
 .doula{
-
-    background:var(--bg-cream);
-
+    background:var(--bg-light);
     text-align:center;
-
 }
-
-/* TÍTULO */
 
 .doula h2{
-
     margin-bottom:30px;
-
 }
 
-/* TEXTO */
-
 .doula p{
-
     max-width:900px;
-
     margin:auto;
-
     font-size:1.2rem;
-
     color:var(--text-light);
-
     line-height:1.9;
-
 }
 
 /* ===================================
    18. RELATOS
 =================================== */
-
 .relatos{
-
-    background:var(--white);
-
+    background: var(--bg-cream);
 }
-
-/* ===================================
-   GRID
-=================================== */
 
 .relatos-grid{
-
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
-
 }
 
-/* ===================================
-   CARD
-=================================== */
-
 .relato-card{
-
-    background:var(--bg-light);
-
+    background: var(--white);
     padding:40px 30px;
-
     border-radius:20px;
-
     text-align:center;
-
-    transition:var(--transition);
-
+    border: 1px solid rgba(243, 225, 220, 0.6);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.01);
+    transition: var(--transition);
 }
 
 .relato-card:hover{
-
     transform:translateY(-8px);
-
     box-shadow:var(--shadow);
-
 }
-
-/* ===================================
-   ÍCONE
-=================================== */
 
 .relato-icon{
-
     display:block;
-
     font-size:2rem;
-
     margin-bottom:20px;
-
 }
-
-/* ===================================
-   TEXTO
-=================================== */
 
 .relato-card p{
-
     color:var(--text-light);
-
     font-style:italic;
-
     margin-bottom:20px;
-
 }
 
-/* ===================================
-   NOME
-=================================== */
-
 .relato-card span:last-child{
-
     color:var(--primary-color);
-
     font-weight:600;
-
 }
 
 /* ===================================
    19. INSTAGRAM
 =================================== */
-
 .instagram-section{
-
-    background:var(--bg-light);
-
-    text-align:center;
-
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto; 
+    text-align: center; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ===================================
-   TÍTULO
-=================================== */
-
 .instagram-title span{
-
-    color:var(--primary-color);
-
-    letter-spacing:3px;
-
-    font-size:.9rem;
-
-    font-weight:600;
-
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #8e8e8e;
+    font-weight: 600;
 }
 
 .instagram-title h2{
-
-    margin-top:10px;
-
+    font-size: 32px;
+    margin: 10px 0;
+    color: #262626;
 }
-
-/* LINHA */
 
 .linha{
-
-    width:80px;
-
-    height:3px;
-
-    background:var(--primary-color);
-
-    margin:20px auto 50px;
-
-    border-radius:20px;
-
+    width: 60px;
+    height: 3px;
+    background-color: #e1306c; 
+    margin: 0 auto 40px auto; 
+    border-radius: 2px;
 }
-
-/* ===================================
-   GRID
-=================================== */
 
 .instagram-grid{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:30px;
-
-    flex-wrap:wrap;
-
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    flex-wrap: wrap;
 }
-
-/* ===================================
-   CARD
-=================================== */
 
 .insta-card{
-
-    width:320px;
-
-    overflow:hidden;
-
-    border-radius:25px;
-
-    position:relative;
-
-    box-shadow:var(--shadow);
-
-    transition:var(--transition);
-
+    background: #ffffff;
+    border: 1px solid #dbdbdb; 
+    border-radius: 12px; 
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    width: 328px; 
+    height: 450px;
 }
-
-.insta-card:hover{
-
-    transform:translateY(-10px);
-
-}
-
-/* ===================================
-   IMAGEM
-=================================== */
-
-.insta-card img{
-
-    width:100%;
-
-    height:500px;
-
-    object-fit:cover;
-
-    transition:.6s ease;
-
-}
-
-.insta-card:hover img{
-
-    transform:scale(1.08);
-
-}
-
-/* ===================================
-   OVERLAY
-=================================== */
-
-.insta-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(0,0,0,.35);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    opacity:0;
-
-    transition:.4s ease;
-
-}
-
-.insta-card:hover .insta-overlay{
-
-    opacity:1;
-
-}
-
-.insta-overlay p{
-
-    color:white;
-
-    font-size:1.1rem;
-
-    font-weight:600;
-
+  
+.insta-card iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    display: block;
 }
 
 /* ===================================
    20. CONTATO
 =================================== */
-
 .contato{
-
-    background:var(--bg-cream);
-
+    background:var(--bg-light);
     text-align:center;
-
 }
-
-/* ===================================
-   GRID
-=================================== */
 
 .contato-grid{
-
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
     gap:25px;
-
     margin-bottom:40px;
-
 }
 
-/* ===================================
-   CARD
-=================================== */
-
 .contato-item{
-
     background:var(--white);
-
     padding:30px;
-
     border-radius:20px;
-
+    border: 1px solid rgba(243, 225, 220, 0.4);
     box-shadow:var(--shadow);
-
     transition:var(--transition);
-
 }
 
 .contato-item:hover{
-
     transform:translateY(-8px);
-
 }
-
-/* ===================================
-   ÍCONES
-=================================== */
 
 .contato-item span{
-
     display:block;
-
     font-size:2rem;
-
     margin-bottom:15px;
-
 }
 
-/* ===================================
-   TEXTO
-=================================== */
-
 .contato-item p{
-
     color:var(--text-light);
-
     font-weight:500;
-
 }
 
 /* ===================================
    21. FOOTER
 =================================== */
-
 footer{
-
-    background:var(--text-dark);
-
-    color:white;
-
+    background: #2e2a2a !important;
+    color: #fbf9f6 !important;
     text-align:center;
-
-    padding:30px 5%;
-
+    padding:40px 5%;
 }
 
 footer p{
-
     font-size:.9rem;
-
     opacity:.8;
-
 } 
+
+/* ===================================
+   DETALLES DE SERVICIOS
+=================================== */
+.servicio-bloque-detalle {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+}
+
+.detalle-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; 
+}
+
+.detalle-content.reversed {
+    flex-direction: row-reverse;
+}
+
+.detalle-content img {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    height: 350px;
+    object-fit: cover; 
+    border-radius: 15px; 
+    box-shadow: var(--shadow);
+}
+
+.detalle-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.detalle-texto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.detalle-texto p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.btn-volver {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color); 
+    font-weight: 600;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.btn-volver:hover {
+    transform: translateX(-5px); 
+    color: var(--primary-hover);
+}
 
 /* ===================================
    22. RESPONSIVE
 =================================== */
-
 @media(max-width:992px){
-
     .sobre{
-
         flex-direction:column;
-
         text-align:center;
-
     }
-
     .sobre-texto h2{
-
         text-align:center;
-
     }
-
 }
 
 @media(max-width:768px){
-
-    /* MENU */
-
-    .menu-toggle{
-
-        display:block;
-
-    }
-
-    .navbar ul{
-
-        display:none;
-
-    }
-
-    /* HERO */
-
-    .hero-content h2{
-
-        font-size:2.5rem;
-
-    }
-
-    .subtitulo{
-
-        font-size:1rem;
-
-    }
-
-    /* SEÇÕES */
-
-    section{
-
-        padding:70px 5%;
-
-    }
-
-    /* SOBRE */
-
-    .sobre-imagens{
-
-        min-height:400px;
-
-    }
-
-    .foto1{
-
-        width:100%;
-
-        height:320px;
-
-    }
-
-    .foto2{
-
-        width:60%;
-
-        height:180px;
-
-    }
-
-    /* INSTAGRAM */
-
-    .insta-card{
-
-        width:100%;
-
-        max-width:320px;
-
-    }
+    .menu-toggle{ display:block; }
+    .navbar ul{ display:none; }
+    .hero-content h2{ font-size:2.5rem; }
+    .subtitulo{ font-size:1rem; }
+    section{ padding:70px 5%; }
+    .sobre-imagens{ min-height:400px; }
+    .foto1{ width:100%; height:320px; }
+    .foto2{ width:60%; height:180px; }
+    .insta-card{ width:100%; max-width:320px; }
 }
