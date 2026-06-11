@@ -2,15 +2,15 @@
    1. VARIABLES
 =================================== */
 :root{
-    --primary-color:#d99aac;
-    --primary-hover:#c48295;
-    --secondary-color:#f2b6c6;
-    --accent-color:#f5d6df;
+    --primary-color:#957334;
+    --primary-hover:#277ada;
+    --secondary-color:#f9ebee;
+    --accent-color:#fbfbfb;
     --text-dark:#3a3535;
     --text-light:#666666;
-    --bg-light:#fbf9f6;
-    --bg-cream:#efe7e5;
-    --white:#ffffff;
+    --bg-light:#945311;
+    --bg-cream:#eea8a8;
+    --white:#c1eaf0;
     --shadow:0 10px 30px rgba(180, 160, 150, 0.08);
     --transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -90,7 +90,7 @@ section h2{
 }
 
 .transparent-header.scrolled{
-    background: rgba(251, 249, 246, 0.9) !important;
+    background: rgb(204, 188, 163) !important;
     box-shadow: 0 4px 20px rgba(180, 160, 150, 0.1);
 }
 
@@ -192,6 +192,9 @@ section h2{
     align-items:center;
     text-align:center;
     overflow:hidden;
+    
+    /* Sección principal superior */
+   
 }
 
 .hero-slider{
