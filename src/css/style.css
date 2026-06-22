@@ -1,203 +1,202 @@
-/* ===================================
-   1. VARIABLES
-=================================== */
-:root{
-    --primary-color:#957334;
-    --primary-hover:#277ada;
-    --secondary-color:#f9ebee;
-    --accent-color:#fbfbfb;
-    --text-dark:#3a3535;
-    --text-light:#666666;
-    --bg-light:#945311;
-    --bg-cream:#eea8a8;
-    --white:#c1eaf0;
-    --shadow:0 10px 30px rgba(180, 160, 150, 0.08);
-    --transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* ===================================
-   2. RESET
-=================================== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-/* ===================================
-   3. HTML
-=================================== */
-html{
-    scroll-behavior:smooth;
-}
-
-/* ===================================
-   4. BODY
-=================================== */
-body{
-    background-color: var(--bg-light); 
-    color: var(--text-dark); 
-    font-family: 'Poppins', sans-serif;
+/* --- RESET BÁSICO Y CONFIGURACIÓN GENERAL --- */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-img{
-    max-width:100%;
-    display:block;
+html {
+    scroll-behavior: smooth;
 }
 
-a{
-    text-decoration:none;
+:root {
+    /* Paleta de Colores */
+    --primary: #805062;
+    --primary-container: #f8bbd0;
+    --on-primary: #ffffff;
+    --secondary: #6b5a60;
+    --secondary-container: #f4dce4;
+    --on-secondary-container: #716066;
+    --surface: #fbf9f8;
+    --surface-container-low: #f5f3f3;
+    --surface-container-lowest: #ffffff;
+    --on-surface: #1b1c1c;
+    --on-surface-variant: #504447;
+    
+    /* Fuentes */
+    --font-headline: 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
 }
 
-ul{
-    list-style:none;
+body {
+    background-color: var(--surface);
+    color: var(--on-surface);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* ===================================
-   5. SEÇÕES
-=================================== */
-section{
-    padding:100px 5%;
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
-section:nth-child(even) {
-    background: linear-gradient(135deg, #fbf9f6 0%, #f5ece9 50%, #eeeaf3 100%);
+.text-center {
+    text-align: center;
 }
 
-section h2{
-    font-family:'Playfair Display',serif;
-    text-align:center;
-    font-size:2.5rem;
-    color:var(--primary-color);
-    margin-bottom:50px;
+/* --- COMPONENTES REUTILIZABLES --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 40px;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-/* ===================================
-   6. HEADER
-=================================== */
-.transparent-header {
-    background: rgba(251, 249, 246, 0.75) !important; 
-    backdrop-filter: blur(12px); 
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(128, 80, 98, 0.15);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background-color: rgba(248, 187, 208, 0.15);
+}
+
+.section-title {
+    font-family: var(--font-headline);
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: var(--on-surface-variant);
+    max-width: 700px;
+    margin: 0 auto 48px auto;
+}
+
+/* --- NAVBAR --- */
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 80px;
+    background-color: rgba(251, 249, 248, 0.85);
+    backdrop-filter: blur(10px);
     z-index: 1000;
-    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
 }
 
-.transparent-header.scrolled{
-    background: rgb(204, 188, 163) !important;
-    box-shadow: 0 4px 20px rgba(180, 160, 150, 0.1);
+.navbar.scrolled {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    height: 70px;
 }
 
-/* ===================================
-   7. NAVBAR
-=================================== */
-.navbar{
-    max-width:1400px;
-    margin:auto;
-    padding:12px 5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* ===================================
-   8. LOGO
-=================================== */
-.logo{
-    display:flex;
-    align-items:center;
-    gap:15px;
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.logo img{
-    width:60px;
-    height:60px;
-    object-fit:cover;
-    border-radius:50%;
-    border:2px solid var(--secondary-color);
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
-.logo-text h3{
-    font-family:'Playfair Display',serif;
-    color:var(--primary-color);
-    font-size:1.4rem;
-    margin:0;
+.logo-text {
+    font-family: var(--font-headline);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--primary);
 }
 
-.logo-text p{
-    color:var(--text-light);
-    font-size:.85rem;
-    margin:0;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
 }
 
-/* ===================================
-   9. MENU
-=================================== */
-.navbar ul{
-    display:flex;
-    align-items:center;
-    gap:30px;
+.nav-link {
+    text-decoration: none;
+    color: var(--on-surface-variant);
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.navbar ul li a{
-    color:var(--text-dark);
-    font-weight:500;
-    position:relative;
-    transition:var(--transition);
+.nav-link:hover, .nav-link.active {
+    color: var(--primary);
+    font-weight: 600;
 }
 
-.navbar ul li a:hover{
-    color:var(--primary-color);
+.btn-nav {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    padding: 10px 24px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: opacity 0.3s;
 }
 
-.navbar ul li a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-5px;
-    width:0;
-    height:2px;
-    background:var(--primary-color);
-    transition:var(--transition);
+.btn-nav:hover {
+    opacity: 0.9;
 }
 
-.navbar ul li a:hover::after{
-    width:100%;
+.menu-mobile-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
 }
 
-/* ===================================
-   10. MENU MOBILE
-=================================== */
-.menu-toggle{
-    display:none;
-    font-size:2rem;
-    cursor:pointer;
-    color:var(--primary-color);
+/* --- HERO SECTION (ANIMACIÓN "ALEJANDO") --- */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
 }
 
-/* ===================================
-   11. HERO
-=================================== */
-.hero{
-    height:100vh;
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    overflow:hidden;
-    
-    /* Sección principal superior */
-   
-}
-
-.hero-slider{
+.hero-slider {
     position: absolute;
     inset: 0;
     z-index: -1;
@@ -205,521 +204,647 @@ section h2{
     overflow: hidden;
 }
 
-.slide{
+.slide {
     position: absolute;
     inset: 0;
     background-size: cover;
     background-position: center;
     opacity: 0;
-    animation: fadeSlider 16s infinite;
+    /* Efecto Alejando (fadeZoomOut) de 16 segundos */
+    animation: fadeZoomOut 16s infinite ease-in-out;
 }
 
-.slide1{
-    background-image: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url("../../imagens/fotoinicio.jpg");
-    animation-delay: 0s;
+.slide1 {
+    background-image: url("../imagens/fototipo1.jpg");
+    animation-delay: 2s;
 }
 
-.slide2{
-    background-image: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url("../../imagens/fototipo1.jpg");
-    animation-delay: 8s; 
+.slide2 {
+    background-image: url("../imagens/hero1.jpg");
+    animation-delay: 5s; 
 }
 
-@keyframes fadeSlider{
-    0% { opacity: 1; transform: scale(1); }
-    45% { opacity: 1; transform: scale(1.04); }
-    50% { opacity: 0; transform: scale(1.05); }
-    55% { opacity: 0; transform: scale(1); }
-    95% { opacity: 0; transform: scale(1); }
-    100% { opacity: 1; transform: scale(1); }
+/* Animación: Empieza un poco grande (1.1) y se va alejando a normal (1) */
+@keyframes fadeZoomOut {
+    0% { opacity: 1; transform: scale(1.05); } /* Cambiamos 1.1 a 1.05 */
+    45% { opacity: 1; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1); }
+    95% { opacity: 0; transform: scale(1.05); } /* Cambiamos 1.1 a 1.05 */
+    100% { opacity: 1; transform: scale(1.05); }
 }
 
-/* ===================================
-   13. HERO CONTENT
-=================================== */
-.hero-content{
-    max-width:850px;
-    padding:20px;
-    color:white;
-    z-index:2;
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
 }
 
-.hero-content h2{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(2.5rem,8vw,5rem);
-    line-height:1.1;
-    margin-bottom:25px;
-    text-shadow:0 4px 15px rgba(0,0,0,.3);
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
 }
 
-.subtitulo{
-    font-size:1.2rem;
-    margin-bottom:30px;
-}
-
-/* ===================================
-   14. BOTÃO
-=================================== */
-.btn-whatsapp{
-    display:inline-block;
-    padding:16px 40px;
-    background:var(--primary-color);
-    color:white;
-    border-radius:50px;
-    font-weight:600;
-    letter-spacing:1px;
-    transition:var(--transition);
-    box-shadow:0 8px 20px rgba(217,154,172,.4);
-}
-
-.btn-whatsapp:hover{
-    background:var(--primary-hover);
-    transform:translateY(-4px) scale(1.02);
-    box-shadow: 0 12px 24px rgba(217, 154, 172, 0.5);
-}
-
-.texto-inferior{
-    margin-top:30px;
-    font-size:1rem;
-    opacity:.95;
-}
-
-/* ===================================
-   15. SOBRE
-=================================== */
-.sobre{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:60px;
-    background:var(--bg-light);
-}
-
-.sobre-imagens{
-    flex:1;
-    position:relative;
-    min-height:500px;
-}
-
-.foto1{
-    width:75%;
-    height:450px;
-    object-fit:cover;
-    border-radius:20px;
-    box-shadow:var(--shadow);
-}
-
-.foto2{
-    width:50%;
-    height:280px;
-    object-fit:cover;
-    position:absolute;
-    bottom:0;
-    right:0;
-    border-radius:20px;
-    border:8px solid var(--white);
-    box-shadow:var(--shadow);
-}
-
-.sobre-texto{
-    flex:1;
-}
-
-.sobre-texto h2{
-    text-align:left;
-}
-
-.sobre-texto p{
-    color:var(--text-light);
-    margin-bottom:20px;
-    font-size:1.05rem;
-}
-
-.sobre .btn-whatsapp{
-    margin-top:10px;
-}  
-
-/* ===================================
-   SERVIÇOS
-=================================== */
-.servicos{
-    background: var(--bg-cream); 
-    padding:100px 5%;
-}
-
-.cards{
-    max-width:1200px;
-    margin:0 auto;
-    display:grid;
-    gap:30px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-@media(max-width:992px){
-    .cards{ grid-template-columns:repeat(2,1fr); }
-}
-
-@media(max-width:768px){
-    .cards{ grid-template-columns:1fr; }
-}
-
-.card{
-    position:relative;
-    overflow:hidden;
-    border-radius:20px;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.card:hover{
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(217, 154, 172, 0.15);
-}
-
-.card img{
-    width:100%;
-    height:350px;
-    object-fit:cover;
-    transition: transform .5s ease;
-}
-
-.card:hover img{
-    transform:scale(1.05);
-}
-
-.overlay{
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    padding:25px;
-    background: linear-gradient(transparent, rgba(46, 42, 42, 0.85));
-    color:white;
-    font-size:1.2rem;
-    font-weight:600;
-}  
-
-/* ===================================
-   17. DOULA
-=================================== */
-.doula{
-    background:var(--bg-light);
-    text-align:center;
-}
-
-.doula h2{
-    margin-bottom:30px;
-}
-
-.doula p{
-    max-width:900px;
-    margin:auto;
-    font-size:1.2rem;
-    color:var(--text-light);
-    line-height:1.9;
-}
-
-/* ===================================
-   18. RELATOS
-=================================== */
-.relatos{
-    background: var(--bg-cream);
-}
-
-.relatos-grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-.relato-card{
-    background: var(--white);
-    padding:40px 30px;
-    border-radius:20px;
-    text-align:center;
-    border: 1px solid rgba(243, 225, 220, 0.6);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.01);
-    transition: var(--transition);
-}
-
-.relato-card:hover{
-    transform:translateY(-8px);
-    box-shadow:var(--shadow);
-}
-
-.relato-icon{
-    display:block;
-    font-size:2rem;
-    margin-bottom:20px;
-}
-
-.relato-card p{
-    color:var(--text-light);
-    font-style:italic;
-    margin-bottom:20px;
-}
-
-.relato-card span:last-child{
-    color:var(--primary-color);
-    font-weight:600;
-}
-
-/* ===================================
-   19. INSTAGRAM
-=================================== */
-.instagram-section{
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto; 
-    text-align: center; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.instagram-title span{
-    font-size: 14px;
-    letter-spacing: 2px;
-    color: #8e8e8e;
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: var(--secondary-container);
+    color: var(--on-secondary-container);
+    border-radius: 9999px;
+    font-size: 12px;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
 }
 
-.instagram-title h2{
-    font-size: 32px;
-    margin: 10px 0;
-    color: #262626;
+.hero-title {
+    font-family: var(--font-headline);
+    font-size: 54px;
+    line-height: 1.2;
+    color: var(--primary);
+    margin-bottom: 24px;
 }
 
-.linha{
-    width: 60px;
-    height: 3px;
-    background-color: #e1306c; 
-    margin: 0 auto 40px auto; 
-    border-radius: 2px;
+.italic-text {
+    font-style: italic;
+    font-family: serif;
 }
 
-.instagram-grid{
+.hero-description {
+    font-size: 18px;
+    color: var(--on-surface-variant);
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
     display: flex;
-    justify-content: center; 
-    gap: 30px; 
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
 }
 
-.insta-card{
-    background: #ffffff;
-    border: 1px solid #dbdbdb; 
-    border-radius: 12px; 
+/* --- SOBRE MI (Con espacio extra superior) --- */
+.about-section {
+    padding: 140px 0 96px 0; /* Aumentado el padding superior a 140px para separar de la portada */
+    background-color: var(--surface-container-lowest);
+}
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.about-image-wrapper {
+    position: relative;
+}
+
+.about-card {
+    border-radius: 40px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
-    width: 328px; 
-    height: 450px;
-}
-  
-.insta-card iframe {
-    width: 100% !important;
-    height: 100% !important;
-    border: none !important;
-    display: block;
-}
-
-/* ===================================
-   20. CONTATO
-=================================== */
-.contato{
-    background:var(--bg-light);
-    text-align:center;
-}
-
-.contato-grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-    margin-bottom:40px;
-}
-
-.contato-item{
-    background:var(--white);
-    padding:30px;
-    border-radius:20px;
-    border: 1px solid rgba(243, 225, 220, 0.4);
-    box-shadow:var(--shadow);
-    transition:var(--transition);
-}
-
-.contato-item:hover{
-    transform:translateY(-8px);
-}
-
-.contato-item span{
-    display:block;
-    font-size:2rem;
-    margin-bottom:15px;
-}
-
-.contato-item p{
-    color:var(--text-light);
-    font-weight:500;
-}
-
-/* ===================================
-   21. FOOTER (Efecto Cristal Futurista)
-=================================== */
-footer {
-    background: rgba(46, 42, 42, 0.4) !important;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 30px 5%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+    border: 8px solid var(--surface-container-lowest);
     position: relative;
     z-index: 10;
+    aspect-ratio: 4/5;
+    transition: all 0.3s;
 }
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.decor-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.3;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+}
+
+.circle-1 {
+    bottom: -24px;
+    left: -24px;
+    background-color: var(--primary-container);
+}
+
+.circle-2 {
+    top: -24px;
+    right: -24px;
+    background-color: var(--secondary-container);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: var(--on-surface-variant);
+    margin-bottom: 20px;
+}
+
+/* --- POR QUE UMA DOULA? --- */
+.why-section {
+    padding: 96px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.feature-card {
+    background-color: var(--surface-container-lowest);
+    border: 1px solid rgba(128, 80, 98, 0.05);
+    border-radius: 48px;
+    padding: 40px;
+    text-align: left;
+    transition: all 0.4s ease;
+}
+
+.feature-card:hover {
+    border-color: rgba(128, 80, 98, 0.2);
+    transform: translateY(-6px);
+}
+
+.highlight-card {
+    background-color: rgba(244, 220, 228, 0.2);
+}
+
+.feature-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    margin-bottom: 32px;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.icon-bg-1 { background-color: var(--secondary-container); }
+.icon-bg-2 { background-color: var(--primary-container); }
+
+.feature-card h3 {
+    font-family: var(--font-headline);
+    font-size: 24px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.feature-card p {
+    color: var(--on-surface-variant);
+}
+
+/* --- SERVICIOS --- */
+.services-section {
+    padding: 96px 0;
+    background-color: var(--surface-container-low);
+}
+
+.services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+}
+
+.services-header-text {
+    max-width: 600px;
+}
+
+.services-header .section-subtitle {
+    margin-bottom: 0;
+}
+
+.services-nav-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(128, 80, 98, 0.2);
+    background: none;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-arrow:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card {
+    background-color: var(--surface-container-lowest);
+    padding: 32px;
+    border-radius: 40px;
+    transition: all 0.3s;
+}
+
+.service-card:hover {
+    box-shadow: 0 20px 30px rgba(128, 80, 98, 0.04);
+}
+
+.service-img-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    aspect-ratio: 16/11;
+}
+
+.service-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.service-card:hover .service-img-wrapper img {
+    transform: scale(1.08);
+}
+
+.service-card h3 {
+    font-family: var(--font-headline);
+    font-size: 22px;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: var(--on-surface-variant);
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: gap 0.3s;
+}
+
+.service-card:hover .service-link {
+    gap: 14px;
+}
+
+/* --- RELATOS --- */
+.testimonials-section {
+    padding: 96px 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.testimonial-card {
+    background-color: var(--surface-container-lowest);
+    padding: 40px 32px;
+    border-radius: 24px;
+    border: 1px solid rgba(128, 80, 98, 0.04);
+    position: relative;
+    font-style: italic;
+}
+
+.color-card {
+    background-color: rgba(248, 187, 208, 0.12);
+    transform: translateY(24px);
+}
+
+.quote-icon {
+    font-size: 48px;
+    color: var(--primary-container);
+    position: absolute;
+    top: -16px;
+    left: 8px;
+    opacity: 0.4;
+}
+
+.testimonial-text {
+    color: var(--on-surface-variant);
+    margin-bottom: 24px;
+}
+
+.testimonial-user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-style: normal;
+}
+
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.user-name {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.user-info {
+    font-size: 12px;
+    color: var(--on-surface-variant);
+}
+
+/* --- INSTAGRAM --- */
+.instagram-section {
+    padding: 96px 0;
+    background-color: rgba(245, 243, 243, 0.4);
+}
+
+.instagram-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    margin-bottom: 48px;
 }
 
-footer p.copyright {
-    font-size: 0.9rem;
-    color: var(--text-dark);
-    opacity: 0.85;
-    margin: 0;
-    font-weight: 400;
+.instagram-title {
+    font-family: var(--font-headline);
+    font-size: 26px;
+    color: var(--primary);
 }
 
-.developer-credit {
-    font-size: 0.9rem;
-    color: var(--text-dark);
-    opacity: 0.9;
-    display: flex;
-    align-items: center;
-    gap: 60px;
+.instagram-handle {
+    color: var(--on-surface-variant);
 }
 
-.dev-link {
-    color: var(--primary-color);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: var(--transition);
+.instagram-follow-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 4px 12px;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--on-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 22px;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(128, 80, 98, 0.1);
 }
 
-.dev-link:hover {
-    color: white;
-    background: var(--primary-color);
+.instagram-follow-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(217, 154, 172, 0.3);
+    opacity: 0.95;
+    box-shadow: 0 6px 14px rgba(128, 80, 98, 0.2);
 }
 
-/* Adaptación del footer en celulares */
-@media(max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-    }
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* ===================================
-   DETALLES DE SERVICIOS
-=================================== */
-.servicio-bloque-detalle {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 24px;
-    box-shadow: var(--shadow);
+.instagram-item {
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.detalle-content {
+.instagram-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.instagram-item:hover .instagram-img {
+    transform: scale(1.08);
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    background-color: var(--surface-container-low);
+    padding: 80px 0;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-brand {
+    max-width: 500px;
+}
+
+.footer-logo {
     display: flex;
     align-items: center;
-    gap: 40px;
-    flex-wrap: wrap; 
+    gap: 10px;
+    margin-bottom: 16px;
 }
 
-.detalle-content.reversed {
-    flex-direction: row-reverse;
-}
-
-.detalle-content img {
-    flex: 1;
-    min-width: 300px;
-    max-width: 450px;
-    height: 350px;
-    object-fit: cover; 
-    border-radius: 15px; 
-    box-shadow: var(--shadow);
-}
-
-.detalle-texto {
-    flex: 1;
-    min-width: 300px;
-}
-
-.detalle-texto h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    color: var(--text-dark);
-    margin-bottom: 15px;
-}
-
-.detalle-texto p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--text-light);
-    margin-bottom: 25px;
-}
-
-.btn-volver {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--primary-color); 
+.footer-title {
+    font-family: var(--font-headline);
+    font-size: 22px;
     font-weight: 600;
-    font-size: 15px;
-    transition: var(--transition);
+    color: var(--primary);
 }
 
-.btn-volver:hover {
-    transform: translateX(-5px); 
-    color: var(--primary-hover);
+.footer-text {
+    color: var(--on-surface-variant);
+    margin-bottom: 24px;
 }
 
-/* ===================================
-   22. RESPONSIVE
-=================================== */
-@media(max-width:992px){
-    .sobre{
-        flex-direction:column;
-        text-align:center;
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--secondary-container);
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    transform: translateY(-4px);
+}
+
+/* ==========================================================================
+   📱 RESPONSIVO Y PANEL DE NAVEGACIÓN PARA CELULAR
+   ========================================================================== */
+
+.bottom-nav {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
-    .sobre-texto h2{
-        text-align:center;
+    
+    .features-grid, .services-grid, .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .color-card {
+        transform: translateY(0);
+    }
+    
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-title {
+        font-size: 42px;
     }
 }
 
-@media(max-width:768px){
-    .menu-toggle{ display:block; }
-    .navbar ul{ display:none; }
-    .hero-content h2{ font-size:2.5rem; }
-    .subtitulo{ font-size:1rem; }
-    section{ padding:70px 5%; }
-    .sobre-imagens{ min-height:400px; }
-    .foto1{ width:100%; height:320px; }
-    .foto2{ width:60%; height:180px; }
-    .insta-card{ width:100%; max-width:320px; }
+/* Cambios específicos para móviles pequeños */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 64px;
+    }
+
+    /* Reducir el tamaño de la foto "Quem sou eu" en celular */
+    .about-card {
+        max-width: 280px; 
+        margin: 0 auto;
+    }
+    .decor-circle {
+        width: 150px; 
+        height: 150px;
+    }
+
+    /* Servicios más pequeños y compactos en celular */
+    .service-card {
+        padding: 20px; /* Menos relleno interno */
+    }
+    .service-img-wrapper {
+        margin-bottom: 16px; /* Menos espacio de separación */
+        aspect-ratio: 16/9; /* Imagen un poco más rectangular para que no ocupe toda la pantalla */
+    }
+    .service-card h3 {
+        font-size: 20px; /* Letra un toque más pequeña */
+    }
+
+    /* Menú superior y botones */
+    .navbar .nav-links, 
+    .menu-mobile-btn {
+        display: none !important;
+    }
+
+    .nav-wrapper {
+        justify-content: center;
+    }
+
+    .services-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .logo-text {
+        display: block !important;
+        font-family: var(--font-headline);
+        font-size: 20px;
+        color: var(--primary);
+        font-weight: 600;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
+    }
+
+    /* Panel Inferior Móvil */
+    .bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 64px;
+        background-color: var(--surface-container-lowest);
+        border-top: 1px solid rgba(128, 80, 98, 0.1);
+        box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.04);
+        justify-content: space-around;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .bottom-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        height: 100%;
+        text-decoration: none;
+        color: var(--on-surface-variant);
+        font-size: 11px;
+        font-weight: 500;
+        gap: 3px;
+        transition: all 0.2s ease;
+    }
+
+    .bottom-nav-item .material-symbols-outlined {
+        font-size: 24px;
+    }
+
+    .bottom-nav-item:hover,
+    .bottom-nav-item:active {
+        color: var(--primary);
+    }
 }

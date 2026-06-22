@@ -1,216 +1,267 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doula | Anahí Cubas</title>
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Styles -->
-    <link rel="icon" href="favicon.ico">
+    <title>Anahí Doula | Apoio Humanizado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
-    <script src="src/js/script.js" defer></script>
-
 </head>
 <body>
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo-area">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1bqGmTDi19Jc1F9JZSpsw3vRmsNlqRFl-xKH9pJTMBWeTREFdKU-TFHvuSZiZfERxlOI8jgC2XiXNzAz72XR_9gbNdTeWewEy7YryiAcDiOk8TWgY8e3oGFUbN_0uNFOrpcACaWFeqcO2VhCfhclEJeLCw6aXVSvDcYCwQ91niTnb09DUCQyhbvndEZdYLY4FagK0pWdGx36i4bFCeoSzBv_48uH9tJlgodvyoMYeziX_WWf21gapY3MFUZbJICelD8YP6vUY-xwP" alt="Anahí Doula Logo" class="logo-img">
+                <span class="logo-text">Doula Anahí</span>
+            </div>
+            <div class="nav-links">
+                <a href="#inicio" class="nav-link active">Início</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#relatos" class="nav-link">Relatos</a>
+                <a href="#contato" class="btn-nav">Bora conversar</a>
+            </div>
+            <button class="menu-mobile-btn">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
 
-    <header class="transparent-header">
-        <nav class="navbar">
-            <a href="#inicio" class="logo">
-                <img src="imagens/logotipo.jpg" alt="Logotipo Anahí Cubas">
-                <div class="logo-text">
-                    <h3>Anahí Cubas</h3>
-                    <p>Doula Perinatal</p>
-                </div>
-            </a>
-
-            <div class="menu-toggle" id="menu-toggle">☰</div>
-
-            <ul id="menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#doula">Por que Doula?</a></li>
-                <li><a href="#relatos">Relatos</a></li>
-                <li><a href="#instagram">Instagram</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="hero" id="inicio">
+        <div class="hero-slider">
+            <div class="slide slide1"></div>
+            <div class="slide slide2"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            
+            <h1 class="hero-title">Apoio humanizado para o seu <span class="italic-text">renascimento</span></h1>
+            <p class="hero-description">Vivencie a gestação e o parto com segurança, protagonismo e amor. Um acompanhamento completo para a sua jornada de maternidade.</p>
+            <div class="hero-buttons">
+                <a href="#contato" class="btn btn-primary">Bora conversar <span class="material-symbols-outlined">chat_bubble</span></a>
+                <a href="#servicos" class="btn btn-outline">Conheça os serviços</a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="hero-slider">
-                <div class="slide slide1"></div>
-                <div class="slide slide2"></div>
-            </div>
-            <div class="hero-content">
-                <h2>SEU PARTO,<br>SEU MOMENTO,<br>SEU APOIO.</h2>
-                <p class="subtitulo">Descubra como ter um acompanhamento completo durante toda sua gestação.</p>
-                <a href="https://api.whatsapp.com/send/?phone=5519989185193&text&type=phone_number&app_absent=0&utm_source=ig" target="_blank" class="btn-whatsapp">QUERO SABER VALORES</a>
-                <p class="texto-inferior">Apoio emocional, informacional e físico para uma jornada inesquecível</p>
-            </div>
-        </section>
-
-        <section id="sobre" class="sobre">
-            <div class="sobre-imagens">
-                <img src="imagens/sobremi.jpg" alt="Anahí Cubas Doula" class="foto1" loading="lazy">
-                <img src="imagens/img1.png" alt="Cuidado perinatal" class="foto2" loading="lazy">
-            </div>
-            <div class="sobre-texto">
-                <h2>  🌸QUEM SOU EU 🌸</h2>
-                <p>Olá! Me chamo <strong>Anahí Cubas</strong>, sou doula dedicada ao cuidado perinatal e apaixonada por acompanhar famílias.</p>
-                <p>Meu propósito é oferecer acolhimento, informação e segurança durante toda sua jornada, garantindo que você se sinta protagonista da sua própria história.</p>
-                <a href="https://api.whatsapp.com/send/?phone=5519989185193&text&type=phone_number&app_absent=0&utm_source=ig" class="btn-whatsapp">ME CHAME AGORA</a>
-            </div>
-        </section>
-
-       <section id="servicos" class="servicos">
-    <h2>Serviços</h2>
-    <div class="cards">
-        
-        <div class="card">
-            <a href="servicios.html#educacao">
-                <img src="imagens/img1.png" alt="Educação Perinatal" loading="lazy">
-                <div class="overlay">Educação Perinatal</div>
-            </a>
-        </div>
-        
-        <div class="card">
-            <a href="servicios.html#parto">
-                <img src="imagens/img2.png" alt="Acompanhamento do Parto" loading="lazy">
-                <div class="overlay">Acompanhamento do Parto</div>
-            </a>
-        </div>
-        
-        <div class="card">
-            <a href="servicios.html#capsulas">
-                <img src="imagens/img3.jpg" alt="Cápsulas de Placenta" loading="lazy">
-                <div class="overlay">Cápsulas de Placenta</div>
-            </a>
-        </div>
-        
-        <div class="card">
-            <a href="servicios.html#cuidados">
-                <img src="imagens/img4.jpg" alt="Cuidados com o Bebê" loading="lazy">
-                <div class="overlay">Cuidados com o Bebê</div>
-            </a>
-        </div>
-        
-        <div class="card">
-            <a href="servicios.html#joias">
-                <img src="imagens/img5.png" alt="Joias com Placenta" loading="lazy">
-                <div class="overlay">Joias con Placenta</div>
-            </a>
-        </div>
-        
-        <div class="card">
-            <a href="servicios.html#arte">
-                <img src="imagens/img6.png" alt="Arte Gestacional" loading="lazy">
-                <div class="overlay">Arte Gestacional</div>
-            </a>
-        </div>
-
-    </div>
-</section>
-
-        <section id="doula" class="doula">
-            <h2>Por que uma Doula?</h2>
-            <p>Uma doula oferece apoio emocional, físico e informacional, tornando sua maternidade mais segura, acolhedora e especial. Estudos comprovam que o acompanhamento de uma doula reduz intervenções desnecessárias y aumenta a satisfação com a experiência do parto.</p>
-        </section>
-
-        <section id="relatos" class="relatos">
-            <h2>Relatos</h2>
-            <div class="relatos-grid">
-                <div class="relato-card">
-                    <span class="relato-icon">🌸</span>
-                    <p>"Anahí foi incrível durante meu parto. Sua presença trouxe a calma que eu precisava."</p>
-                    <span>— Mariana</span>
+    <section class="about-section" id="sobre">
+        <div class="container about-wrapper">
+            <div class="about-image-wrapper">
+                <div class="about-card">
+                    <img alt="Anahí Doula" class="about-img" src="src/imagens/sobremi.jpg">
                 </div>
-                <div class="relato-card">
-                    <span class="relato-icon">💎</span>
-                    <p>"A joia de placenta ficou maravilhosa. Uma lembrança eterna desse momento."</p>
-                    <span>— Fernanda</span>
-                </div>
-                <div class="relato-card">
-                    <span class="relato-icon">💛</span>
-                    <p>"Profissional cheia de amor y conhecimento. Recomendo para todas as gestantes."</p>
-                    <span>— Camila</span>
+                <div class="decor-circle circle-1"></div>
+                <div class="decor-circle circle-2"></div>
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">Oi, eu sou a Anahí.</h2>
+                <div class="about-text">
+                    <p>Minha missão é devolver o protagonismo do parto às mulheres. Acredito que o nascimento é um portal sagrado que merece ser atravessado com consciência, respeito e as ferramentas emocionais corretas.</p>
+                    <p>Com formação especializada em obstetrícia humanizada, acompanho famílias para que a chegada de um novo membro seja uma experiência de cura e celebração, minimizando intervenções desnecessárias e maximizando o bem-estar.</p>
                 </div>
             </div>
-        </section>
-
-        
-        <!-- INSTAGRAM -->
-<section id="instagram" class="instagram-section">
-
-    <div class="instagram-title">
-        <span>INSTAGRAM</span>
-        <h2>Últimos Posts</h2>
-        <div class="linha"></div>
-    </div>
-
-    <div class="instagram-grid">
-
-        <!-- POST 1 -->
-        <div class="insta-card">
-            <iframe src="https://www.instagram.com/p/DTJJLy_gcWI/embed" 
-                    frameborder="0" 
-                    scrolling="no" 
-                    allowtransparency="true">
-            </iframe>
         </div>
+    </section>
 
-        <!-- POST 2 -->
-        <div class="insta-card">
-            <iframe src="https://www.instagram.com/p/DWmj_eHAVG_/embed" 
-                    frameborder="0" 
-                    scrolling="no" 
-                    allowtransparency="true">
-            </iframe>
-        </div>
-
-    </div>
-
-</section>
-
-        <section id="contato" class="contato">
-            <h2>Entre em Contato</h2>
-            <div class="contato-grid">
-                <div class="contato-item">
-                    <span>📱</span>
-                    <p>WhatsApp</p>
-                </div>
-                <div class="contato-item">
-                    <span>📍</span>
-                    <p>Campinas, SP</p>
-                </div>
-                <div class="contato-item">
-                    <span>📸</span>
-                    <p>@anahicubas.doula</p>
+    <!-- Seção: Serviços -->
+    <section class="services-section" id="servicos">
+        <div class="container">
+            <div class="services-header">
+                <div class="services-header-text">
+                    <h2 class="section-title">Cuidado integral em todas as fases</h2>
+                    <p class="section-subtitle">Cada serviço é pensado para oferecer a segurança e o afeto que você e seu bebê precisam.</p>
                 </div>
             </div>
-            <a href="https://api.whatsapp.com/send/?phone=5519989185193&text&type=phone_number&app_absent=0&utm_source=ig" target="_blank" class="btn-whatsapp">Falar no WhatsApp</a>
-        </section>
-    </main>
-
-   <footer>
-    <div class="footer-container">
-        <p class="copyright">© 2024 Anahí Cubas - Doula Perinatal. Todos os direitos reservados.</p>
-        
-        <div class="developer-credit">
-            <span>Desenvolvido por </span>
-            <a href="https://wa.me/TU_NUMERO_AQUI" target="_blank" class="dev-link">
-                Wilmer <i class="fab fa-whatsapp"></i>
-            </a>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img alt="Suporte Pré-Natal" src="src/imagens/hero1.jpg">
+                    </div>
+                    <h3>Suporte Pré-Natal</h3>
+                    <p>Encontros para preparação física e emocional, elaboração do plano de parto e desconstrução de medos.</p>
+                    <a href="#" class="service-link">Ver detalhes <span class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img alt="Parto Humanizado" src="src/imagens/img1.png">
+                    </div>
+                    <h3>Parto Humanizado</h3>
+                    <p>Acompanhamento presencial durante todo o trabalho de parto, oferecendo conforto e suporte contínuo.</p>
+                    <a href="#" class="service-link">Ver detalhes <span class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img alt="Puerpério Imediato" src="src/imagens/img2.png">
+                    </div>
+                    <h3>Puerpério Imediato</h3>
+                    <p>Apoio nas primeiras horas e dias após o nascimento, auxiliando na adaptação e cuidados iniciais.</p>
+                    <a href="#" class="service-link">Ver detalhes <span class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img alt="Consultoria de Amamentação" src="src/imagens/img3.jpg">
+                    </div>
+                    <h3>Consultoria de Amamentação</h3>
+                    <p>Orientação técnica para uma amamentação tranquila, manejo de dificuldades e pega correta.</p>
+                    <a href="#" class="service-link">Ver detalhes <span class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img alt="Cuidados com o RN" src="src/imagens/img4.jpg">
+                    </div>
+                    <h3>Cuidados com o RN</h3>
+                    <p>Treinamento prático para pais de primeira viagem: banho, sono, trocas e rotina do bebê.</p>
+                    <a href="#" class="service-link">Ver detalhes <span class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-img-wrapper">
+                        <img alt="Rodas de Apoio" src="src/imagens/img6.png">
+                    </div>
+                    <h3>Rodas de Apoio</h3>
+                    <p>Espaço de troca entre gestantes e mães, criando uma rede de apoio e compartilhamento.</p>
+                    <a href="#" class="service-link">Ver detalhes <span class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </section>
 
+    <section class="why-section">
+        <div class="container text-center">
+            <h2 class="section-title">Por que ter uma doula?</h2>
+            <p class="section-subtitle">A doula não substitui a equipe médica; ela completa o cuidado focando no seu bem-estar emocional e físico.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon icon-bg-1">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </div>
+                    <h3>Apoio Emocional</h3>
+                    <p>Acolhimento contínuo, escuta ativa e redução da ansiedade. Transformamos o medo em confiança através da presença constante.</p>
+                </div>
+                <div class="feature-card highlight-card">
+                    <div class="feature-icon icon-bg-2">
+                        <span class="material-symbols-outlined">self_improvement</span>
+                    </div>
+                    <h3>Conforto Físico</h3>
+                    <p>Uso de métodos naturais para alívio da dor, massagens, técnicas de respiração e sugestão de posições que facilitam o parto.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-bg-1">
+                        <span class="material-symbols-outlined">menu_book</span>
+                    </div>
+                    <h3>Informação Baseada em Evidências</h3>
+                    <p>Esclarecimento de dúvidas técnicas, auxílio na elaboração do plano de parto e suporte para tomadas de decisão conscientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section" id="relatos">
+        <div class="container">
+            <h2 class="section-title text-center">Relatos de Amor</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <span class="material-symbols-outlined quote-icon">format_quote</span>
+                    <p class="testimonial-text">"Ter a Anahí ao meu lado foi a melhor decisão que tomamos. Ela trouxe calma quando eu estava perdida e força quando achei que não conseguiria. Meu parto foi transformador."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCv6ko8WxjSHbWQ1xGWtRyrqFXH5cReoNFsVtCPpFM4iz12HXlYDg-qcw46DEqx0Ul6WVd9uDCWsSmAWlBglRWJ0vVuRewWeOyEBQ1pPkM0Smj39gjKoeYSqEwOtlnxL5-sfbnnBhJFCORpa4Xjjj4PN8HlebPh-fSL4Zd1ni9zTW6KTdOe3aWx3xcCqwErixKi7J6F9Tn2uimgvOLDWxgJesLk6NuBwICdddufunZmZNA0pDp_HU8TEpyq7GTjhzlZWlii0eDJJaxc');"></div>
+                        <div>
+                            <p class="user-name">Mariana S.</p>
+                            <p class="user-info">Mãe do Theo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card color-card">
+                    <span class="material-symbols-outlined quote-icon">format_quote</span>
+                    <p class="testimonial-text">"O acompanhamento pré-natal me deu segurança para entender cada fase do meu corpo. A consultoria de amamentação salvou meus primeiros dias com a pequena Laura."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNavlf-BLzZqhhxgx_Amtd0zitMEcuUiuxVWzmZUauIH9oJfsl5EUrRZAQbXflvNXxZcYK8VpswfkNcZ8gAGl78w3iPSyt1_ogpxIf3ZBNpVjPTzQw4Td6BjQM0-efX41m6wyGFK3emIzK6Dg8G-2H3V3WBKeaHH5ZT9H2ZXafkV8vD927jDMKaha8NMevH_pa_dHN545xHOdYt1yqVbOasqQywNElTUZcIWiCc1YxjlI5qqQGgYRnek0fjhxj4recSfOdDJMqhXjj');"></div>
+                        <div>
+                            <p class="user-name">Juliana K.</p>
+                            <p class="user-info">Mãe da Laura</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <span class="material-symbols-outlined quote-icon">format_quote</span>
+                    <p class="testimonial-text">"Anahí é sinônimo de paz. Ela cuida da família inteira. Meu marido se sentiu muito mais seguro participando de tudo com as orientações dela. Recomendo para todos!"</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzDtDoqNnfmG7XTU8KeBP_u6unG-axiz4TsPwjbRZYSXgHuQSESm0NplRE2Magabdi9FK9BrPjp0Sh-8FweHu57cO9qBpXPZrR3K9jM9foFpcCB83WzGcOxS9q7Cy1Ie9j4m4_Q4REe1nA3fpkeL9dFpQv4EfdDkPh7eEIM-7gU3FMwK_F270ZLZFj1dOVGPVVcjeTIQhggmReCk7W85ByF5mfwo8EYVnhDTUx-4o38a0SELJBOgImt2DvxXpLz_-tAiRIYAnAHUhz');"></div>
+                        <div>
+                            <p class="user-name">Beatriz & Lucas</p>
+                            <p class="user-info">Pais do Gael</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="instagram-section">
+        <div class="container">
+            <div class="instagram-header">
+                <div>
+                    <h2 class="instagram-title">Acompanhe no Instagram</h2>
+                    <p class="instagram-handle">@anahidoula</p>
+                </div>
+                <a href="https://instagram.com/anahidoula" target="_blank" class="instagram-follow-btn">Siga-nos</a>
+            </div>
+            <div class="instagram-grid">
+                <a href="https://www.instagram.com/p/DXkXmsJgfOi/" target="_blank" class="instagram-item">
+                    <div class="instagram-img" style="background-image: url('src/images/post1.jpg');"></div>
+                </a>
+                <a href="https://www.instagram.com/p/DPAJlOVgftB/" target="_blank" class="instagram-item">
+                    <div class="instagram-img" style="background-image: url('src/images/post2.jpg');"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer" id="contato">
+        <div class="container footer-wrapper">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="material-symbols-outlined text-primary text-3xl">spa</span>
+                    <span class="footer-title">Anahí Doula</span>
+                </div>
+                <p class="footer-text">Transformando a experiência do nascimento através do amor, conhecimento e respeito. Apoio humanizado e integral em todas as etapas.</p>
+                <div class="footer-socials">
+                    <a href="https://instagram.com/anahidoula" target="_blank" class="social-icon" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/tu_usuario" target="_blank" class="social-icon" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <nav class="bottom-nav">
+        <a href="#inicio" class="bottom-nav-item">
+            <span class="material-symbols-outlined">home</span>
+            <span>Início</span>
+        </a>
+        <a href="#sobre" class="bottom-nav-item">
+            <span class="material-symbols-outlined">person</span>
+            <span>Sobre</span>
+        </a>
+        <a href="#servicos" class="bottom-nav-item">
+            <span class="material-symbols-outlined">pregnancy</span>
+            <span>Serviços</span>
+        </a>
+        <a href="#relatos" class="bottom-nav-item">
+            <span class="material-symbols-outlined">forum</span>
+            <span>Relatos</span>
+        </a>
+    </nav>
     
+    <script src="src/js/script.js"></script>
 </body>
 </html>
