@@ -592,9 +592,18 @@ body {
 
 .instagram-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Cambiamos a columna para apilar el texto */
+    align-items: center;    /* Centramos horizontalmente */
+    text-align: center;     /* Alineamos el texto al centro */
     margin-bottom: 48px;
+    gap: 16px;              /* Espacio entre el texto y el botón */
+}
+
+/* Agregamos esto para que el botón se vea bien centrado debajo del texto */
+.instagram-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .instagram-title {
@@ -658,13 +667,15 @@ body {
 /* --- FOOTER --- */
 .main-footer {
     background-color: var(--surface-container-low);
-    padding: 80px 0;
+    padding: 64px 0 32px 0; /* Ajustamos los espacios superior e inferior */
 }
 
+/* Separa el texto a la izquierda y las redes a la derecha */
 .footer-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 48px; /* Espacio antes de la línea de derechos reservados */
 }
 
 .footer-brand {
@@ -687,9 +698,9 @@ body {
 
 .footer-text {
     color: var(--on-surface-variant);
-    margin-bottom: 24px;
 }
 
+/* Íconos sociales a la derecha */
 .footer-socials {
     display: flex;
     gap: 16px;
@@ -711,6 +722,27 @@ body {
     background-color: var(--primary);
     color: var(--on-primary);
     transform: translateY(-4px);
+}
+
+/* Nueva sección de Derechos Reservados */
+.footer-bottom {
+    text-align: center;
+    padding-top: 32px;
+    border-top: 1px solid rgba(128, 80, 98, 0.15); /* Línea divisoria muy sutil */
+}
+
+.footer-author {
+    font-family: var(--font-headline);
+    font-size: 28px;
+    font-style: italic; /* Letra cursiva como en tu foto */
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.footer-copyright {
+    color: var(--on-surface-variant);
+    font-size: 14px;
 }
 
 /* ==========================================================================
