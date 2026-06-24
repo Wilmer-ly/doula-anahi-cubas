@@ -1,29 +1,29 @@
+/* --- EFEITOS E FUNCIONALIDADES --- */
 document.addEventListener("DOMContentLoaded", function() {
     
-    // 1. Efeito de Scroll na Navbar (Corrigido para .navbar)
+    // 1. EFEITO DE SCROLL NA NAVBAR
     const header = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
 
-    // 2. Menu Mobile (Para abrir e fechar os links no celular)
+    // 2. MENU MOBILE
     const mobileBtn = document.querySelector('.menu-mobile-btn');
     const navLinks = document.querySelector('.nav-links');
-
     if (mobileBtn && navLinks) {
         mobileBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
     }
 
-    // 3. Lazy Loading para Iframes (Mantido caso você adicione mapas ou vídeos depois)
+    // 3. LAZY LOADING PARA IFRAMES
     const lazyIframes = document.querySelectorAll(".lazy-iframe");
-
     if (lazyIframes.length > 0) {
         if ("IntersectionObserver" in window) {
             const iframeObserver = new IntersectionObserver(function(entries, observer) {
@@ -35,9 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         iframeObserver.unobserve(iframe);
                     }
                 });
-            }, {
-                rootMargin: "0px 0px 200px 0px"
-            });
+            }, { rootMargin: "0px 0px 200px 0px" });
 
             lazyIframes.forEach(function(iframe) {
                 iframeObserver.observe(iframe);
@@ -49,4 +47,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
-  

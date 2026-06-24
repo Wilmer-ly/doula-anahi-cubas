@@ -6,113 +6,150 @@
     <title>Serviços Detalhados | Anahí Cubas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght=700&family=Poppins:wght=300;400;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght=300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
-    <script src="src/js/script.js" defer></script>
 </head>
-<body>
+<body class="pagina-servicios">
 
     <header class="transparent-header">
         <nav class="navbar">
-            <a href="index.html#inicio" class="logo">
-                <img src="imagens/logotipo.jpg" alt="Logotipo Anahí Cubas">
-                <div class="logo-text">
-                    <h3>Anahí Cubas</h3>
-                    <p>Doula Perinatal</p>
+            <div class="container nav-wrapper">
+                <div class="logo-area">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1bqGmTDi19Jc1F9JZSpsw3vRmsNlqRFl-xKH9pJTMBWeTREFdKU-TFHvuSZiZfERxlOI8jgC2XiXNzAz72XR_9gbNdTeWewEy7YryiAcDiOk8TWgY8e3oGFUbN_0uNFOrpcACaWFeqcO2VhCfhclEJeLCw6aXVSvDcYCwQ91niTnb09DUCQyhbvndEZdYLY4FagK0pWdGx36i4bFCeoSzBv_48uH9tJlgodvyoMYeziX_WWf21gapY3MFUZbJICelD8YP6vUY-xwP" alt="Anahí Doula Logo" class="logo-img">
+                    <span class="logo-text">Doula Anahí</span>
                 </div>
-            </a>
-
-            
-
-            <ul id="menu">
-                <li><a href="index.html#inicio">Início</a></li>
-                <li><a href="index.html#sobre">Sobre Mim</a></li>
-                <li><a href="index.html#servicos">Serviços</a></li>
-                <li><a href="index.html#doula">Por que Doula?</a></li>
-                <li><a href="index.html#relatos">Relatos</a></li>
-                <li><a href="index.html#instagram">Instagram</a></li>
-                <li><a href="index.html#contato">Contato</a></li>
-            </ul>
+                
+                <div class="nav-links">
+                    <a href="index.html#inicio" class="nav-link">Início</a>
+                    <a href="index.html#sobre" class="nav-link">Sobre Mim</a>
+                    <a href="index.html#servicos" class="nav-link">Serviços</a>
+                    <a href="index.html#relatos" class="nav-link">Relatos</a>
+                    <a href="index.html#contato" class="btn-nav">Contato</a>
+                </div>
+            </div>
         </nav>
     </header>
 
-     <div> 
-            <h1>Nossos Serviços</h1>
-            <p>Conheça detalhadamente como posso te apoiar nessa jornada.</p>
-        </div>
+    <div class="services-hero"> 
+        <h1>Nossos Serviços</h1>
+        <p>Conheça detalhadamente como posso te apoiar nessa jornada.</p>
+    </div>
 
+    <main class="container-servicios-detalle">
+        <!-- SECCIÓN 1: EDUCACIÓN PERINATAL -->
         <section id="educacao" class="servicio-bloque-detalle">
             <div class="detalle-content">
-                <img src="imagens/img1.png" alt="Educação Perinatal">
+                <div class="detalle-img-wrapper">
+                    <img src="src/imagens/hero1.jpg" alt="Educação Perinatal">
+                </div>
                 <div class="detalle-texto">
                     <h2>Educação Perinatal</h2>
                     <p>Aqui você escreve toda a explicação detalhada sobre a Educação Perinatal. Explique como funciona, os temas abordados nas consultas e a importância desse preparo para a gestante e sua família.</p>
-                    <a href="index.html#servicos" class="btn-volver">← Voltar aos Serviços</a>
+                    <a href="index.html#servicos" class="btn-volver"><span class="material-symbols-outlined">arrow_back</span> Voltar aos Serviços</a>
                 </div>
             </div>
         </section>
 
+        <!-- SECCIÓN 2: PARTO HUMANIZADO -->
         <section id="parto" class="servicio-bloque-detalle">
             <div class="detalle-content reversed">
-                <img src="imagens/img2.png" alt="Acompanhamento do Parto">
+                <div class="detalle-img-wrapper">
+                    <img src="src/imagens/img1.png" alt="Acompanhamento do Parto">
+                </div>
                 <div class="detalle-texto">
                     <h2>Acompanhamento do Parto</h2>
-                    <p>Descrição detalhada sobre o apoio contínuo durante o trabalho de parto e parto. Medidas naturais de alívio da dor, suporte emocional e físico para uma experiência respeitosa e segura.</p>
-                    <a href="index.html#servicos" class="btn-volver">← Voltar aos Serviços</a>
+                    <p>Descrição detalhada sobre o apoio contínuo durante o trabalho de parto e parto. Medidas naturais de alívio da dor, suporte emocional e físico para uma experiencia respeitosa e segura.</p>
+                    <a href="index.html#servicos" class="btn-volver"><span class="material-symbols-outlined">arrow_back</span> Voltar aos Serviços</a>
                 </div>
             </div>
         </section>
 
-        <section id="capsulas" class="servicio-bloque-detalle">
-            <div class="detalle-content">
-                <img src="imagens/img3.jpg" alt="Cápsulas de Placenta">
-                <div class="detalle-texto">
-                    <h2>Cápsulas de Placenta</h2>
-                    <p>Explicação sobre os benefícios da placentofagia, o processo seguro de desidratação e encapsulamento, e como auxilia no pós-parto.</p>
-                    <a href="index.html#servicos" class="btn-volver">← Voltar aos Serviços</a>
-                </div>
-            </div>
-        </section>
-
+        <!-- SECCIÓN 3: PUERPÉRIO -->
         <section id="cuidados" class="servicio-bloque-detalle">
-            <div class="detalle-content reversed">
-                <img src="imagens/img4.jpg" alt="Cuidados com o Bebê">
+            <div class="detalle-content">
+                <div class="detalle-img-wrapper">
+                    <img src="src/imagens/img2.png" alt="Cuidados com o Bebê">
+                </div>
                 <div class="detalle-texto">
-                    <h2>Cuidados com o Bebê</h2>
+                    <h2>Puerpério Imediato</h2>
                     <p>Orientações práticas de pós-parto, primeiros cuidados com o recém-nascido, banho, sono e apoio na amamentação.</p>
-                    <a href="index.html#servicos" class="btn-volver">← Voltar aos Serviços</a>
+                    <a href="index.html#servicos" class="btn-volver"><span class="material-symbols-outlined">arrow_back</span> Voltar aos Serviços</a>
                 </div>
             </div>
         </section>
 
+        <!-- SECCIÓN 4: AMAMENTAÇÃO -->
+        <section id="capsulas" class="servicio-bloque-detalle">
+            <div class="detalle-content reversed">
+                <div class="detalle-img-wrapper">
+                    <img src="src/imagens/img3.jpg" alt="Cápsulas de Placenta">
+                </div>
+                <div class="detalle-texto">
+                    <h2>Consultoria de Amamentação</h2>
+                    <p>Explicação sobre os benefícios da placentofagia, o processo seguro de desidratação e encapsulamento, e como auxilia no pós-parto.</p>
+                    <a href="index.html#servicos" class="btn-volver"><span class="material-symbols-outlined">arrow_back</span> Voltar aos Serviços</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: CUIDADOS RN -->
         <section id="joias" class="servicio-bloque-detalle">
             <div class="detalle-content">
-                <img src="imagens/img5.png" alt="Joias com Placenta">
+                <div class="detalle-img-wrapper">
+                    <img src="src/imagens/img4.jpg" alt="Joias com Placenta">
+                </div>
                 <div class="detalle-texto">
-                    <h2>Joias com Placenta</h2>
+                    <h2>Cuidados com o RN</h2>
                     <p>Uma forma linda e eterna de eternizar o vínculo. Detalhes sobre como são feitas as joias artesanais usando recordações da sua gestação.</p>
-                    <a href="index.html#servicos" class="btn-volver">← Voltar aos Serviços</a>
+                    <a href="index.html#servicos" class="btn-volver"><span class="material-symbols-outlined">arrow_back</span> Voltar aos Serviços</a>
                 </div>
             </div>
         </section>
 
+        <!-- SECCIÓN 6: RODAS DE APOIO -->
         <section id="arte" class="servicio-bloque-detalle">
             <div class="detalle-content reversed">
-                <img src="imagens/img6.png" alt="Arte Gestacional">
+                <div class="detalle-img-wrapper">
+                    <img src="src/imagens/img6.png" alt="Arte Gestacional">
+                </div>
                 <div class="detalle-texto">
-                    <h2>Arte Gestacional</h2>
+                    <h2>Rodas de Apoio</h2>
                     <p>Pintura na barriga, carimbo da placenta (árvore da vida) e outras formas artísticas e afetivas de celebrar o final da gestação.</p>
-                    <a href="index.html#servicos" class="btn-volver">← Voltar aos Serviços</a>
+                    <a href="index.html#servicos" class="btn-volver"><span class="material-symbols-outlined">arrow_back</span> Voltar aos Serviços</a>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <footer>
-        <p>&copy; 2024 Anahí Cubas - Doula Perinatal. Todos os direitos reservados.</p>
+    <footer class="main-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Anahí Cubas - Doula Perinatal. Todos os direitos reservados.</p>
+        </div>
+        
     </footer>
 
+    <!-- Navegación inferior fija para móviles (Estilo Instagram) -->
+    <nav class="bottom-nav">
+        <a href="index.html#inicio" class="bottom-nav-item">
+            <span class="material-symbols-outlined">home</span>
+            <span>Início</span>
+        </a>
+        <a href="index.html#sobre" class="bottom-nav-item">
+            <span class="material-symbols-outlined">person</span>
+            <span>Sobre</span>
+        </a>
+        <a href="index.html#servicos" class="bottom-nav-item">
+            <span class="material-symbols-outlined">pregnancy</span>
+            <span>Serviços</span>
+        </a>
+        <a href="index.html#relatos" class="bottom-nav-item">
+            <span class="material-symbols-outlined">forum</span>
+            <span>Relatos</span>
+        </a>
+    </nav>
+
+    <!-- Enlace al JS para que todo funcione de diez -->
+    <script src="src/js/script.js"></script>
 </body>
 </html>
