@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doula Anahí Cubas | Apoio Perinatal</title>
     
+    <!-- Google Fonts unificadas com o CSS (Playfair Display e Plus Jakarta Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Ícones nativos do Google -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="src/css/style.css">
 </head>
-<body>
+<body class="pagina-servicios">
     <nav class="navbar">
         <div class="container nav-wrapper">
             <div class="logo-area">
                 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1bqGmTDi19Jc1F9JZSpsw3vRmsNlqRFl-xKH9pJTMBWeTREFdKU-TFHvuSZiZfERxlOI8jgC2XiXNzAz72XR_9gbNdTeWewEy7YryiAcDiOk8TWgY8e3oGFUbN_0uNFOrpcACaWFeqcO2VhCfhclEJeLCw6aXVSvDcYCwQ91niTnb09DUCQyhbvndEZdYLY4FagK0pWdGx36i4bFCeoSzBv_48uH9tJlgodvyoMYeziX_WWf21gapY3MFUZbJICelD8YP6vUY-xwP" alt="Anahí Doula Logo" class="logo-img">
                 <span class="logo-text">Doula Anahí</span>
             </div>
+            
+            <!-- Menu para Computadores -->
             <div class="nav-links">
                 <a href="#inicio" class="nav-link active">Início</a>
                 <a href="#sobre" class="nav-link">Sobre</a>
@@ -27,18 +31,22 @@
                 <a href="#relatos" class="nav-link">Relatos</a>
                 <a href="#contato" class="btn-nav">Bora conversar</a>
             </div>
+            
+            <!-- Botão WhatsApp visível apenas no Celular (Substitui os links acima automaticamente) -->
             <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20conversar%20sobre%20seus%20serviços!" target="_blank" rel="noopener noreferrer" class="mobile-wa-btn" aria-label="Conversar no WhatsApp">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" style="margin-right: 5px; vertical-align: middle;">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
                 </svg>
                 <span>Conversar</span>
             </a>
+            
             <button class="menu-mobile-btn" type="button" aria-label="Abrir menu">
                 <span class="material-symbols-outlined">menu</span>
             </button>
         </div>
     </nav>
 
+    <!-- HERO SECTION -->
     <header class="hero" id="inicio">
         <div class="hero-slider">
             <div class="slide slide1"></div>
@@ -56,6 +64,7 @@
     </header>
 
     <main>
+        <!-- SOBRE MIM -->
         <section class="about-section" id="sobre">
             <div class="container about-wrapper">
                 <div class="about-image-wrapper">
@@ -75,6 +84,7 @@
             </div>
         </section>
 
+        <!-- SERVIÇOS -->
         <section class="services-section" id="servicos">
             <div class="container">
                 <div class="services-header">
@@ -89,7 +99,7 @@
                             <img alt="Suporte Pré-Natal" src="src/imagens/hero1.jpg">
                         </div>
                         <h3>Suporte Pré-Natal</h3>
-                        <p>Encontros para preparação física e emocional, execução do plano de parto e desconstrução de medos.</p>
+                        <p>Encontros para preparação física e emotional, execução do plano de parto e desconstrução de medos.</p>
                         <a href="servicios.html#educacao" class="service-link">Ver detalhes <span class="material-symbols-outlined">arrow_forward</span></a>
                     </div>
                     <div class="service-card">
@@ -136,6 +146,7 @@
             </div>
         </section>
 
+        <!-- POR QUE DOULA -->
         <section class="why-section">
             <div class="container text-center">
                 <h2 class="section-title">Por que ter uma doula?</h2>
@@ -159,13 +170,14 @@
                         <div class="feature-icon icon-bg-1">
                             <span class="material-symbols-outlined">menu_book</span>
                         </div>
-                        <h3>Information Based on Evidence</h3>
+                        <h3>Informação Baseada em Evidências</h3>
                         <p>Esclarecimento de dúvidas técnicas, auxílio na execução do plano de parto e suporte para tomadas de decisão conscientes.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- TESTEMUNHOS -->
         <section class="testimonials-section" id="relatos">
             <div class="container">
                 <h2 class="section-title text-center">Relatos de Amor</h2>
@@ -185,7 +197,7 @@
                         <span class="material-symbols-outlined quote-icon">format_quote</span>
                         <p class="testimonial-text">"O acompanhamento pré-natal me deu segurança para entender cada fase do meu corpo. A consultoria de amamentação salvou meus primeiros dias com a pequena Laura."</p>
                         <div class="testimonial-user">
-                            <div class="user-avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNavlf-BLzZqhhxgx_Amtd0zitMEcuUiuxVWzmZUauIH9oJfsl5EUrRZAQbXflvNXxZcYK8VpswfkNcZ8gAGl78w3iPSyt1_ogpxIf3ZBNpVjPTzQw4Td6BjQM0-efX41m6wyGFK3emIzK6Dg8G-2H3V3WBKeaHH5ZT9H2ZXafkV8vD927jDMKaha8NMevH_pa_dHN545xHOdYt1yqVbOasqQywNElTUZcIWiCc1YxjlI5qqQGgYRnek0fjhxj4recSfOdDJMqhXjj');"></div>
+                            <div class="user-avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuNavlf-BLzZqhhxgx_Amtd0zitMEcuUiuxVWzmZUauIH9oJfsl5EUrRZAQbXflvNXxZcYK8VpswfkNcZ8gAGl78w3iPSyt1_ogpxIf3ZBNpVjPTzQw4Td6BjQM0-efX41m6wyGFK3emIzK6Dg8G-2H3V3WBKeaHH5ZT9H2ZXafkV8vD927jDMKaha8NMevH_pa_dHN545xHOdYt1yqVbOasqQywNElTUZcIWiCc1YxjlI5qqQGgYRnek0fjhxj4recSfOdDJMqhXjj');"></div>
                             <div>
                                 <p class="user-name">Juliana K.</p>
                                 <p class="user-info">Mãe da Laura</p>
@@ -207,6 +219,7 @@
             </div>
         </section>
 
+        <!-- INSTAGRAM -->
         <section class="instagram-section" id="instagram">
             <div class="container">
                 <div class="instagram-header">
@@ -228,13 +241,14 @@
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="main-footer" id="contato">
         <div class="container">
             <div class="footer-wrapper">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <span class="material-symbols-outlined text-primary text-3xl">spa</span>
-                        <span class="footer-title">Anahí Doula</span>
+                        <span class="material-symbols-outlined text-primary style-icon" style="font-size: 30px; color: var(--primary);">spa</span>
+                        <span class="footer-title" style="margin-left: 8px;">Anahí Doula</span>
                     </div>
                     <p class="footer-text">
                         Transformando a experiência do nascimento através do amor, conhecimento e respeito. Apoio humanizado e integral em todas as etapas.
@@ -258,6 +272,7 @@
         </div>
     </footer>
 
+    <!-- BARRA DE NAVEGAÇÃO INFERIOR PARA CELULARES (ESTILO INSTAGRAM) -->
     <nav class="bottom-nav">
         <a href="#inicio" class="bottom-nav-item">
             <span class="material-symbols-outlined">home</span>
