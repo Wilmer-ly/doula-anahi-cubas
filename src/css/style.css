@@ -28,7 +28,7 @@ html {
 }
 
 body {
-    background-color: var(--surface);
+    background-: var(--surface);
     color: var(--on-surface);
     font-family: var(--font-body);
     font-size: 16px;
@@ -78,7 +78,7 @@ body {
 .btn-outline {
     background-color: transparent;
     border: 1px solid var(--primary);
-    color: var(--primary);
+    color: var(--on-surface);
 }
 
 .btn-outline:hover {
@@ -194,19 +194,17 @@ body {
 }
 
 .mobile-wa-btn {
-    background-color: #926379; /* Color lila de Doula Anahí */
+    background-color: #926379; 
     color: #ffffff !important;
     text-decoration: none;
     padding: 8px 14px;
     border-radius: 8px;
-    font-family: var(--font-body); /* Ajustado para consistência */
+    font-family: 'Playfair Display', serif;
     font-size: 13px;
     font-weight: bold;
-    display: none; /* Oculto por defeito em desktop */
+    display: none; 
     white-space: nowrap;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .mobile-wa-btn:active {
@@ -214,7 +212,7 @@ body {
 }
 
 /* ==========================================================================
-   HERO SECTION (ANIMAÇÃO "ALEJANDO")
+   HERO SECTION (RETORNADO A TRANSPARENTE ORIGINAL)
    ========================================================================== */
 .hero {
     height: 100vh;
@@ -254,16 +252,23 @@ body {
     100% { opacity: 1; transform: scale(1.05); }
 }
 
+/* Filtro totalmente invisible para que la imagen brille libre */
 .hero-overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
+    background: transparent !important; 
 }
 
+/* Contenedor transparente original sin cajas ni fondos */
 .hero-content {
     position: relative;
     z-index: 2;
     max-width: 650px;
+    padding: 0 !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
 }
 
 .badge {
@@ -279,26 +284,38 @@ body {
     margin-bottom: 24px;
 }
 
+/* 🌟 CAMBIA AQUÍ EL COLOR DEL TÍTULO PRINCIPAL ("Apoio humanizado...") */
 .hero-title {
     font-family: var(--font-headline);
     font-size: 54px;
     line-height: 1.2;
-    color: var(--primary);
+    color: #9d2d56 !important;
     margin-bottom: 24px;
+    text-shadow: none !important;
 }
 
 .italic-text { font-style: italic; font-family: serif; }
 
+/* 🌟 CAMBIA AQUÍ EL COLOR DEL SUBTÍTULO ("Vivencie a gestação...") */
 .hero-description {
     font-size: 18px;
-    color: var(--on-surface-variant);
+    color: #ffffff !important; 
     margin-bottom: 40px;
+    text-shadow: none !important;
 }
 
 .hero-buttons {
     display: flex;
     justify-content: center;
     gap: 16px;
+}
+
+.hero-buttons .btn-outline {
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+}
+.hero-buttons .btn-outline:hover {
+    background-color: rgba(248, 187, 208, 0.15) !important;
 }
 
 /* ==========================================================================
@@ -505,7 +522,11 @@ body {
 .pagina-servicios .nav-links { display: flex !important; gap: 30px !important; align-items: center !important; }
 
 .services-hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../imagens/post1.png') no-repeat !important;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('../imagens/post1.png') no-repeat !important;
+    background-size: cover !important;
+    background-position: center 36% !important; 
+    min-height: 620px !important;               
+    padding: 140px 20px !important;
     display: flex !important;
     flex-direction: column !important; 
     justify-content: center !important; 
@@ -517,6 +538,16 @@ body {
 
 .services-hero h1 { font-family: var(--font-headline); font-size: 3rem !important; margin-bottom: 10px; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); }
 .services-hero p { font-family: var(--font-body); font-size: 1.2rem !important; max-width: 600px; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
+
+@media (max-width: 768px) {
+    .services-hero {
+        min-height: 500px !important;               
+        background-position: center 18% !important; 
+        padding: 110px 20px !important;
+    }
+    .services-hero h1 { font-size: 2.2rem !important; }
+    .services-hero p { font-size: 1.05rem !important; }
+}
 
 .container-servicios-detalle { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
 .servicio-bloque-detalle { margin-bottom: 100px; scroll-margin-top: 100px; }
@@ -564,51 +595,51 @@ span.material-symbols-outlined,
    ========================================================================== */
 .bottom-nav { display: none; }
 
-/* Para Tablets (Menos de 992px) */
 @media (max-width: 992px) {
     .about-wrapper { grid-template-columns: 1fr; gap: 40px; }
     .features-grid, .services-grid, .testimonials-grid { grid-template-columns: 1fr; gap: 24px; }
     .color-card { transform: translateY(0); }
     .instagram-grid { grid-template-columns: repeat(2, 1fr); }
-    .hero-title { font-size: 42px; }
     
     .detalle-content, .detalle-content.reversed { flex-direction: column; gap: 30px; }
     .detalle-img-wrapper img { height: 300px; }
-    .services-hero h1 { font-size: 2.2rem !important; }
 
-    /* Botão flutuante para Tablets */
     .mobile-wa-btn {
         display: flex !important;
         position: fixed !important;
-        bottom: 30px !important;
-        right: 30px !important;
+        bottom: 80px !important;
+        right: 20px !important;
         z-index: 99999 !important;
-        background-color: #25D366 !important; /* Cor oficial do WhatsApp para destacar na flutuação */
+        background-color: var(--primary) !important;
         color: white !important;
-        padding: 14px 22px !important;
+        padding: 15px 20px !important;
         border-radius: 50px !important;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     }
 }
 
-/* Para Celulares (Menos de 768px) */
 @media (max-width: 768px) {
     body { padding-bottom: 80px; }
     
-    /* Sobre mim celular */
+    /* Reseteo completo de la caja en celular */
+    .hero-content {
+        padding: 0 !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        box-shadow: none !important;
+        margin: 0;
+    }
+
     .about-card { max-width: 280px; margin: 0 auto; }
     .decor-circle { width: 150px; height: 150px; }
 
-    /* Serviços celular */
     .service-card { padding: 20px; }
     .service-img-wrapper { margin-bottom: 16px; aspect-ratio: 16/9; }
     .service-card h3 { font-size: 20px; }
 
-    /* Ocultar links de desktop e ajustar alinhamento do cabeçalho */
     .navbar .nav-links, .menu-mobile-btn { display: none !important; }
-    .nav-wrapper { display: flex !important; justify-content: space-between !important; align-items: center !important; }
     .services-header { flex-direction: column; align-items: flex-start; gap: 16px; }
-    .hero-buttons { flex-direction: column; }
+    .hero-buttons { flex-direction: column; width: 100%; }
+    .hero-buttons .btn { width: 100%; }
     
     .logo-text {
         display: block !important;
@@ -618,19 +649,15 @@ span.material-symbols-outlined,
         font-weight: 600;
     }
 
-    /* Mostrar botão na barra de navegação superior para celulares substituindo os links */
     .mobile-wa-btn {
-        display: flex !important;
-        position: static !important; /* Reseta o posicionamento fixo de tablet */
-        background-color: var(--primary) !important; /* Retorna à cor lila da identidade */
+        display: inline-block !important;
+        position: static !important; 
         padding: 8px 14px !important;
         border-radius: 8px !important;
-        box-shadow: none !important;
     }
 
     .footer-wrapper { flex-direction: column; align-items: center; text-align: center; gap: 32px; }
 
-    /* Barra de Navegação Inferior Móvel (Estilo Instagram) */
     .bottom-nav {
         display: flex;
         position: fixed;
@@ -664,4 +691,7 @@ span.material-symbols-outlined,
 
     .bottom-nav-item .material-symbols-outlined { font-size: 24px; margin-bottom: 2px; }
     .bottom-nav-item:hover, .bottom-nav-item:active { color: var(--primary); }
+    
+    .hero-title { font-size: 32px !important; }
+    .hero-description { font-size: 15px !important; }
 }
