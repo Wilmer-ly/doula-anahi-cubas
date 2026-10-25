@@ -1,0 +1,4 @@
+# Direcciones viejas -> nuevas (Netlify)
+https://doula-anahi-cubas.netlify.app/*  https://anahicubas.com.br/:splat  301!
+/servicios.html   /servicos   301!
+/servicios        /servicos   301!

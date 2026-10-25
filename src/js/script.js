@@ -1,49 +1,33 @@
-/* --- EFEITOS E FUNCIONALIDADES --- */
-document.addEventListener("DOMContentLoaded", function() {
-    
-    // 1. EFEITO DE SCROLL NA NAVBAR
-    const header = document.querySelector('.navbar');
-    if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+// Menu do celular: abre e fecha, e avisa leitores de tela se está aberto.
+document.addEventListener("DOMContentLoaded", function () {
+    var botao = document.querySelector(".menu-btn");
+    var menu = document.getElementById("menu-principal");
+    if (!botao || !menu) return;
+
+    var icone = botao.querySelector("use");
+    var texto = botao.querySelector(".sr-only");
+
+    function definir(aberto) {
+        menu.classList.toggle("open", aberto);
+        botao.setAttribute("aria-expanded", aberto ? "true" : "false");
+        if (icone) icone.setAttribute("href", aberto ? "#i-close" : "#i-menu");
+        if (texto) texto.textContent = aberto ? "Fechar menu" : "Abrir menu";
     }
 
-    // 2. MENU MOBILE
-    const mobileBtn = document.querySelector('.menu-mobile-btn');
-    const navLinks = document.querySelector('.nav-links');
-    if (mobileBtn && navLinks) {
-        mobileBtn.addEventListener('click', () => {
-             navLinks.classList.toggle('active');
+    botao.addEventListener("click", function () {
+        definir(botao.getAttribute("aria-expanded") !== "true");
     });
-    }
 
-    // 3. LAZY LOADING PARA IFRAMES
-    const lazyIframes = document.querySelectorAll(".lazy-iframe");
-    if (lazyIframes.length > 0) {
-        if ("IntersectionObserver" in window) {
-            const iframeObserver = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        const iframe = entry.target;
-                        iframe.src = iframe.dataset.src;
-                        iframe.classList.remove("lazy-iframe");
-                        iframeObserver.unobserve(iframe);
-                    }
-                });
-            }, { rootMargin: "0px 0px 200px 0px" });
+    // Fecha o menu ao escolher um link
+    menu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () { definir(false); });
+    });
 
-            lazyIframes.forEach(function(iframe) {
-                iframeObserver.observe(iframe);
-            });
-        } else {
-            lazyIframes.forEach(function(iframe) {
-                iframe.src = iframe.dataset.src;
-            });
+    // Fecha com a tecla Esc
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && botao.getAttribute("aria-expanded") === "true") {
+            definir(false);
+            botao.focus();
         }
-    }
+    });
 });

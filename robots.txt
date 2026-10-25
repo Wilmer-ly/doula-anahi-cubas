@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /src/
 
-Sitemap: https://doula-anahi-cubas.netlify.app/sitemap.xml
+Sitemap: https://anahicubas.com.br/sitemap.xml

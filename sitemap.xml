@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://doula-anahi-cubas.netlify.app/</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://anahicubas.com.br/</loc>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
-    <loc>https://doula-anahi-cubas.netlify.app/servicios.html</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://anahicubas.com.br/servicos</loc>
+    <lastmod>2026-10-25</lastmod>
   </url>
 </urlset>
